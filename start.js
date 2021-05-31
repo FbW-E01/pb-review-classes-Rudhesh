@@ -6,7 +6,7 @@ class Component {
         this.name = name;
     }
     render() {
-        console.log(`<p>Component _${this.name}_  rendering`);
+        return(`<p>Component _${this.name}_  rendering`);
     }
 }
 
@@ -26,7 +26,8 @@ class UserCard extends Component {
 
     render() {
 
-       console.log (`<div class="card card-user">
+       console.log (`${super.render()} 
+       <div class="card card-user">
             <img class="card-img-top" src="${this.imageUrl} " alt>
         <div class = "card-body" >
                 <h5 class="card-title">${this.name}</h5>
